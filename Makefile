@@ -27,7 +27,7 @@ CC = gcc
 
 AR = ar -rc
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = 
 
 OBJ = 		$(SRCS:.c=.o)
 

@@ -79,6 +79,9 @@ int			**init_tab(char *str)
 
 int			findarg(char *str, int *i, int *tab)
 {
+	int j;
+
+	j = *i;
 	tab[3] = *i;
 	*i = *i + 1;
 	while (str[*i] && str[*i] != '.' && (ft_charset(str[*i]) < 0))
@@ -102,10 +105,12 @@ void		det_args(char *str, int ***tab)
 	int i;
 	int pos;
 	int tlen;
+	int *tmp;
 
 	i = -1;
 	pos = 0;
 	tlen = count_args(str);
+	tmp = NULL;
 	pos = 0;
 	while (str[++i] && pos < tlen)
 		if (str[i] == '%')
